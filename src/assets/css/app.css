@@ -5,6 +5,9 @@
     text-align: center;
     min-height: 100vh;
 }
+.row {
+    margin: 0 !important
+}
 body {
     background-color: rgb(254, 199, 34);
     background-repeat: no-repeat;

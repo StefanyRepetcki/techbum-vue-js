@@ -41,7 +41,7 @@
 }
 .section {
     width: 95vw;
-    padding: 0;
+    padding: 0 !important;
     max-width: 1360px;
     background-color: rgb(250, 250, 251);
     margin-bottom: 8%;
@@ -55,6 +55,14 @@
     height: 4.375rem;
     padding: 1.125rem 4.5rem;
     background: rgb(255, 101, 0);
+}
+@media only screen and (max-width: 600px) {
+    .header-products {
+        padding: 0px !important;
+    }
+    .row {
+        padding: 0px !important;
+    }
 }
 h1 {
     font-size: 1.5rem;
