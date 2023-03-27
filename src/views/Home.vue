@@ -14,7 +14,7 @@
         <v-col v-for="(department, index) in listProducts" :key="index" cols="12" sm="3">
             <v-card class="pa-2 no-box-shadow">
                 <h2 class="name">{{ department.name }}</h2>
-                <img :src="department.img" alt="">
+                <img :src="department.img" alt="Imagem do produto" width="210" height="132">
             </v-card>
         </v-col>
     </v-row>
@@ -32,5 +32,3 @@ export default {
     }
 }
 </script>
-
-<style src="../assets/css/departamentos.css"></style>

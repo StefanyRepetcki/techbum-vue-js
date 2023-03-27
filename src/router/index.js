@@ -17,8 +17,8 @@ const routes = [
   },
   {
     path: '/editar',
-    name: 'Remover',
-    component: () => import('../views/Remover.vue')
+    name: 'Editar',
+    component: () => import('../views/Edit.vue')
   }
 ]
 

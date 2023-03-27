@@ -11,13 +11,13 @@ export default new Vuex.Store({
     setListProducts(state, payload) {
       state.listProducts = payload;
     },
-    addProducts(state, custumer) {
+    addProduct(state, custumer) {
       state.listProducts.push(custumer);
     },
-    removeProducts(state, custumer) {
+    removeProduct(state, custumer) {
       state.listProducts.splice(custumer, 1);
     },
-    editarProduct(state, custumer) {
+    editProduct(state, custumer) {
       state.listProducts[custumer.index] = custumer.params;
     },
   },

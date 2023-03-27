@@ -10,6 +10,13 @@
     margin: 0 !important;
 }
 
+.navigation > a { visibility: hidden; }
+@media screen and (min-width: 1024px) {
+    .navigation > a {
+        visibility: inherit;
+    }
+}
+
 body {
     background-color: rgb(254, 199, 34);
     background-repeat: no-repeat;
@@ -19,15 +26,15 @@ body {
 
 #nav {
     padding: 30px;
-}
 
-#nav a {
-    font-weight: bold;
-    color: #2c3e50;
-}
+    a {
+        font-weight: bold;
+        color: #2c3e50;
 
-#nav a.router-link-exact-active {
-    color: #42b983;
+        &.router-link-exact-active {
+            color: #42b983;
+        }
+    }
 }
 
 .icon {
@@ -107,7 +114,7 @@ h2 {
 }
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family:  'Poppins', sans-serif;
 }
 
 .v-dialog__container {

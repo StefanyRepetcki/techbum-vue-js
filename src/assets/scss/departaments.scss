@@ -1,86 +1,96 @@
 .subtitle {
-    margin-top: 0;
     padding: 30px 15px;
     background-color: #FAFAFB;
+    margin-top: 0;
 }
+
 .banner {
-    margin: 0px;
-    padding: 0px;
-    border: none;
+    margin: 0;
+    padding: 0;
     list-style: none;
     outline: none;
     box-sizing: border-box;
     background-color: rgb(254, 199, 34);
     height: 22vw;
 }
-.banner > img {
-    cursor: pointer;
-    aspect-ratio: auto 1440 / 234;
+
+.banner>img {
+    width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
-    border: none;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0;
+    padding: 0;
     list-style: none;
     outline: none;
     box-sizing: border-box;
-    width: 100%;
-    object-fit: cover;
-    object-position: center top;
+    aspect-ratio: auto 1440 / 234;
+    cursor: pointer;
 }
-.subtitle > h2 {
+
+.subtitle>h2 {
     font-size: 1.5rem;
     line-height: 1.5rem;
     font-weight: 700;
-    color: rgb(66, 70, 77);
-    text-transform: none;
+    color: #42464d;
     padding-left: 0.3125rem;
+    text-transform: none;
     user-select: none;
 }
+
 .v-window__next {
     right: 0;
 }
+
 .section {
     width: 95vw;
-    padding: 0 !important;
     max-width: 1360px;
-    background-color: rgb(250, 250, 251);
     margin-bottom: 8%;
+    padding: 0;
+    background-color: #fafafa;
 }
+
 .header-products {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     height: 4.375rem;
     padding: 1.125rem 4.5rem;
-    background: rgb(255, 101, 0);
+    background: #ff6500;
 }
+
 @media only screen and (max-width: 600px) {
     .header-products {
-        padding: 0px !important;
+        padding: 0;
     }
+
     .row {
-        padding: 0px !important;
+        padding: 0;
     }
 }
+
 h1 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
+
 .name {
     font-size: 1rem;
     line-height: 1.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: rgb(0, 58, 106);
+    color: #003a6a;
     text-align: center;
-    padding: 0px 0.25rem;
-    text-transform: uppercase;
+    padding: 0 0.25rem;
 }
+
 .no-box-shadow {
-    box-shadow: none !important;
+    box-shadow: none;
+}
+
+.section__products>div>div>img {
+    object-fit: cover;
 }
