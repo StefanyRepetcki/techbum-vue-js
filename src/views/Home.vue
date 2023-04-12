@@ -23,12 +23,12 @@
 
 <script>
 import {
-    mapState
+  mapState,
 } from 'vuex';
 
 export default {
-    computed: {
-        ...mapState(['listProducts']),
-    }
-}
+  computed: {
+    ...mapState(['listProducts']),
+  },
+};
 </script>

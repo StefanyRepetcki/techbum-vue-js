@@ -18,7 +18,7 @@
         </v-card-text>
         <v-card-actions class="card__actions">
           <v-btn
-            v-on:click="editarProduct(0)"
+            v-on:click="editarProduct('cancel')"
             dark
             class="card__button card__button--cancel"
             >Cancelar</v-btn
@@ -33,15 +33,15 @@
     </template>
   </v-dialog>
 </template>
-  <script>
-import { mapActions } from "vuex";
+<script>
+import { mapActions } from 'vuex';
 
 export default {
   data() {
     return {
-      indexEdit: "",
-      nameEdit: "",
-      imgEdit: "",
+      indexEdit: '',
+      nameEdit: '',
+      imgEdit: '',
       dialogModal: false,
     };
   },
@@ -64,69 +64,72 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["editProduct"]),
+    ...mapActions(['editProduct']),
     editarProduct(index) {
-      if (index === 0) {
-        this.$emit("cancel");
+      if (index === 'cancel') {
+        this.$emit('cancel');
         return;
       }
       const params = {
         name: this.nameEdit,
         img: this.imgEdit,
       };
-      this.$store.commit("editProduct", {
+      this.$store.commit('editProduct', {
         index,
         params,
       });
       this.dialogModal = false;
-      this.$emit("saved");
+      this.$emit('saved');
     },
   },
 };
 </script>
-  <style lang="scss" scoped>
-.card--modal {
-  width: 600px;
-  margin: 2% auto;
+<style lang="scss" scoped>
+.card {
+  &--modal {
+    width: 600px;
+    margin: 2% auto;
+  }
+
+  &__toolbar {
+      background-color: #42a5f5;
+      color: white !important;
+    }
+
+    &__text {
+      padding: 12px;
+    }
+
+    &__input {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &--name {
+        margin-right: 15px;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__button {
+        color: white !important;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &--cancel {
+          background-color: #f44336 !important;
+        }
+
+        &--edit {
+          background-color: #4caf50 !important;
+        }
+      }
 }
 
-.card__toolbar {
-  background-color: #42a5f5;
-  color: white !important;
-}
-
-.card__text {
-  padding: 12px;
-}
-
-.card__input {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.card__input--name {
-  margin-right: 15px;
-}
-
-.card__actions {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.card__button {
-  color: white !important;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-left: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.card__button--cancel {
-  background-color: #f44336 !important;
-}
-
-.card__button--edit {
-  background-color: #4caf50 !important;
-}
 </style>

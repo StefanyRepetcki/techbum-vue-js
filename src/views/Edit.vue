@@ -23,49 +23,49 @@
 
 <script>
 import {
-    mapState
+  mapState,
 } from 'vuex';
 import ModalEdit from '../components/ModalEdit.vue';
 
 export default {
-    components: {
-        ModalEdit
+  components: {
+    ModalEdit,
+  },
+  data() {
+    return {
+      msg: 'alterado',
+      hasSaved: false,
+      activeModal: false,
+      index: 0,
+      imgSelected: '',
+      nameSelected: '',
+    };
+  },
+  computed: {
+    ...mapState(['listProducts']),
+  },
+  methods: {
+    removeProduct(params) {
+      this.$store.commit('removeProduct', params);
+      this.msg = 'removido';
+      this.hasSaved = true;
     },
-    data() {
-        return {
-            msg: 'alterado',
-            hasSaved: false,
-            activeModal: false,
-            index: 0,
-            imgSelected: '',
-            nameSelected: '',
-        };
+    editProduct(index, params) {
+      this.activeModal = true;
+      this.index = index;
+      this.imgSelected = params.img;
+      this.nameSelected = params.name;
     },
-    computed: {
-        ...mapState(['listProducts']),
+    saved() {
+      this.msg = 'Alterado';
+      this.hasSaved = true;
+      this.activeModal = false;
     },
-    methods: {
-        removeProduct(params) {
-            this.$store.commit('removeProduct', params);
-            this.msg = 'removido';
-            this.hasSaved = true;
-        },
-        editProduct(index, params) {
-            this.activeModal = true;
-            this.index = index;
-            this.imgSelected = params.img;
-            this.nameSelected = params.name;
-        },
-        saved() {
-            this.msg = 'Alterado';
-            this.hasSaved = true;
-            this.activeModal = false;
-        },
-        cancel() {
-            this.activeModal = false;
-        }
-    }
-}
+    cancel() {
+      this.activeModal = false;
+    },
+  },
+};
 </script>
 
 <style scoped>

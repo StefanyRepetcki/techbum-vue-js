@@ -46,55 +46,55 @@ export default {
       drawer: false,
       group: null,
       icons: [
-        { icon: "mdi-headset" },
-        { icon: "mdi-cards-heart" },
-        { icon: "mdi-cart" },
+        { icon: 'mdi-headset' },
+        { icon: 'mdi-cards-heart' },
+        { icon: 'mdi-cart' },
       ],
       menuItems: [
-        { text: "Tela de início", link: "#/" },
-        { text: "Cadastrar produto", link: "#/cadastrar" },
-        { text: "Editar produto", link: "#/editar" },
+        { text: 'Tela de início', link: '#/' },
+        { text: 'Cadastrar produto', link: '#/cadastrar' },
+        { text: 'Editar produto', link: '#/editar' },
       ],
       list: [
         {
-          name: "PERIFÉRICOS",
-          img: "https://static.kabum.com.br/conteudo/categorias/PERIFERICOS.png",
+          name: 'PERIFÉRICOS',
+          img: 'https://static.kabum.com.br/conteudo/categorias/PERIFERICOS.png',
         },
         {
-          name: "CADEIRAS",
-          img: "https://static.kabum.com.br/conteudo/categorias/CADEIRAS.png",
+          name: 'CADEIRAS',
+          img: 'https://static.kabum.com.br/conteudo/categorias/CADEIRAS.png',
         },
         {
-          name: "GAMES",
-          img: "https://static.kabum.com.br/conteudo/categorias/GAMER.png",
+          name: 'GAMES',
+          img: 'https://static.kabum.com.br/conteudo/categorias/GAMER.png',
         },
         {
-          name: "COMPUTADORES",
-          img: "https://static.kabum.com.br/conteudo/categorias/COMPUTADORES.png",
+          name: 'COMPUTADORES',
+          img: 'https://static.kabum.com.br/conteudo/categorias/COMPUTADORES.png',
         },
         {
-          name: "CELULAR & SMARTPHONE",
-          img: "https://static.kabum.com.br/conteudo/categorias/CELULAR-SMARTPHONE_1645045581.png",
+          name: 'CELULAR & SMARTPHONE',
+          img: 'https://static.kabum.com.br/conteudo/categorias/CELULAR-SMARTPHONE_1645045581.png',
         },
         {
-          name: "TV",
-          img: "https://static.kabum.com.br/conteudo/categorias/TV_1645045665.png",
+          name: 'TV',
+          img: 'https://static.kabum.com.br/conteudo/categorias/TV_1645045665.png',
         },
         {
-          name: "BENEFÍCIO",
-          img: "https://static.kabum.com.br/conteudo/categorias/beneficio.png",
+          name: 'BENEFÍCIO',
+          img: 'https://static.kabum.com.br/conteudo/categorias/beneficio.png',
         },
         {
-          name: "SEGURANÇA",
-          img: "https://static.kabum.com.br/conteudo/categorias/SEGURANCA.png",
+          name: 'SEGURANÇA',
+          img: 'https://static.kabum.com.br/conteudo/categorias/SEGURANCA.png',
         },
         {
-          name: "TELEFONIA FIXA",
-          img: "https://static.kabum.com.br/conteudo/categorias/TELEFONIA-FIXA_1645096675.png",
+          name: 'TELEFONIA FIXA',
+          img: 'https://static.kabum.com.br/conteudo/categorias/TELEFONIA-FIXA_1645096675.png',
         },
         {
-          name: "TABLETS",
-          img: "https://static.kabum.com.br/conteudo/categorias/TABLETS-IPADS-E-E-READERS_1645096620.png",
+          name: 'TABLETS',
+          img: 'https://static.kabum.com.br/conteudo/categorias/TABLETS-IPADS-E-E-READERS_1645096620.png',
         },
       ],
     };
@@ -105,7 +105,7 @@ export default {
     },
   },
   mounted() {
-    this.$store.commit("setListProducts", this.list);
+    this.$store.commit('setListProducts', this.list);
   },
 };
 </script>

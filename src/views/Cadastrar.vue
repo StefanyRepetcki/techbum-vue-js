@@ -47,8 +47,8 @@ export default {
     return {
       hasSaved: false,
       model: null,
-      name: "",
-      product: "",
+      name: '',
+      product: '',
     };
   },
   methods: {
@@ -58,7 +58,7 @@ export default {
           name: this.name,
           img: this.product,
         };
-        this.$store.commit("addProduct", payload);
+        this.$store.commit('addProduct', payload);
         this.hasSaved = true;
       }
     },
@@ -71,28 +71,22 @@ export default {
   width: 600px;
   height: 400px;
   margin: 2% auto;
-
   &__card {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
     &__icon {
       margin-right: 10px;
     }
-
     &__title {
       margin-left: 10px;
     }
-
     &__input {
       width: 100%;
-
       &--name {
         margin-bottom: 15px;
       }
     }
-
     &__divider {
       margin: 15px 0;
     }
